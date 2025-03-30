@@ -16,6 +16,7 @@ app.prepare().then(() => {
 
     io.on("connection", (socket) => {
         // ...
+        console.log("connection");
     });
 
     httpServer
@@ -24,6 +25,9 @@ app.prepare().then(() => {
             process.exit(1);
         })
         .listen(port, () => {
-            console.log(`> Ready on http://${hostname}:${port}`);
+            console.log(
+                `> Ready on http://https://next-phaser-tau.vercel.app:3000`
+            );
+            // console.log(`> Ready on http://${hostname}:${port}`);
         });
 });
